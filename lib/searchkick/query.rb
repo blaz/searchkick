@@ -339,6 +339,10 @@ module Searchkick
         end
       end
 
+      if options[:aggregations]
+        payload[:aggregations] = options[:aggregations]
+      end
+
       @body = payload
       @facet_limits = facet_limits
       @page = page
